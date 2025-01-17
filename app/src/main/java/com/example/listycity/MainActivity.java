@@ -83,7 +83,10 @@ public class MainActivity extends AppCompatActivity {
 
             cityList.add(inputText.getText().toString());// we convert the thing we get from textfield into a string, and then add it to the array.
             inputText.getText().clear();
-            cityAdapter.notifyDataSetChanged();//Updates changes to array
+            
+            confirmTextButton.setVisibility(View.INVISIBLE);
+            inputText.setVisibility(View.INVISIBLE);
+            cityAdapter.notifyDataSetChanged();//Updates changes to stuff
 
         });//confirm button end
 
@@ -112,7 +115,8 @@ public class MainActivity extends AppCompatActivity {
                     }
 
 
-                    cityAdapter.notifyDataSetChanged();//Updates array
+
+                    cityAdapter.notifyDataSetChanged();//Updates array and other stuff
                 });//Delete City button end
 
 
